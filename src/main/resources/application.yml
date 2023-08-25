@@ -4,9 +4,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: ${{secret.URL}}
-    username: ${{secret.MASTER}}
-    password: ${{secret.PASSWORD}}
+    url: ${{URL}}
+    username: ${{MASTER}}
+    password: ${{PASSWORD}}
 
   jpa:
     hibernate:
@@ -16,11 +16,11 @@ spring:
       hibernate:
         format_sql:true
 jwt:
-  secret-key: ${{secret.JWT}}
+  secret-key: ${{JWT}}
 
 oauth:
   kakao:
-    client-id: ${{ secret.KAKAO_ID }}
+    client-id: ${{ KAKAO_ID }}
     url:
       auth: https://kauth.kakao.com
       api: https://kapi.kakao.com
