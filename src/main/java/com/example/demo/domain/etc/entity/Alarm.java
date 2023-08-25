@@ -1,5 +1,6 @@
 package com.example.demo.domain.etc.entity;
 
+import com.example.demo.domain.sport.entity.Sport;
 import com.example.demo.domain.user.entity.User;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -21,4 +22,7 @@ public class Alarm {
     @JoinColumn(name = "userId", nullable = false)
     private User user;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "sportId", nullable = false)
+    private Sport sport;
 }
