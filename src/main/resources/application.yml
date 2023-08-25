@@ -1,0 +1,39 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ENC(Al+aY5hNhdWQRHXXoc1iLapBaXdGDTMxOQX5EFDjekfQqZlDE/1PO1eDWstRBIndeRswM74+Eq+1VfmJKqj1ZFA1SKGH11BAsb+bYPvAlnXSb2MulfOS3gvmpSiajldw)
+    username: ENC(AepvmBm6dXG9se/umfBeXBIIfuCFZLG6upXsYFHM1bI=)
+    password: ENC(dcolKkkcjgne07eg891PNY662YlllIAl5M5Utt8HidY=)
+    hikari:
+      maximum-pool-size: 4
+
+  jpa:
+    hibernate:
+      ddl-auto: update #create -> update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql:true
+jwt:
+  secret-key: ENC(bYZtH2mZx/cDMUEj/Uwqnxp/vBY9vEmGPJBw0hZD6AIkOPuSvO0+QjUTFopHRvUWf5Tiysekc65cBPgzXReoW7OajiEtNT62biWYoDbsol6S1G8/675NjavVgPrpdmDoJgR6SGdCWss=)
+
+oauth:
+  kakao:
+    client-id: ENC(3OnZ+ppb0ZDU7TeMZxEmkbJ6W+8evwo7NMyuWDAOidt69qphsl19BSbEK8JNXkzD)
+    url:
+      auth: https://kauth.kakao.com
+      api: https://kapi.kakao.com
+
+  mvc:
+    path match:
+      matching-strategy: ant_path_matcher
+    format:
+      date-time: yyyy-MM-dd HH:mm:ss
+
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+    password : ${PASSWORD}

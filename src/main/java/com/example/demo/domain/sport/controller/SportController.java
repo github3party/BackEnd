@@ -1,6 +1,6 @@
 package com.example.demo.domain.sport.controller;
 
-import com.example.demo.domain.sport.SportService;
+import com.example.demo.domain.sport.service.SportService;
 import com.example.demo.domain.sport.dto.res.ReadSportListResDto;
 import com.example.demo.domain.user.jwt.AuthTokensGenerator;
 import com.example.demo.global.dto.ApplicationResponse;
