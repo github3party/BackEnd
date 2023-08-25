@@ -6,7 +6,6 @@ import com.example.demo.domain.etc.entity.Alarm;
 import com.example.demo.domain.etc.repository.AlarmRepository;
 import com.example.demo.domain.sport.dto.res.ReadSportListResDto;
 import com.example.demo.domain.sport.dto.res.ReadSportResDto;
-import com.example.demo.domain.sport.entity.Sport;
 import com.example.demo.domain.sport.repository.SportRepository;
 import com.example.demo.domain.user.entity.User;
 import com.example.demo.domain.user.repository.UserRepository;
@@ -15,7 +14,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 

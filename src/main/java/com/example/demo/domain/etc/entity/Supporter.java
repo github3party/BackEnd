@@ -4,6 +4,7 @@ import com.example.demo.domain.sport.entity.Sport;
 import com.example.demo.domain.user.entity.User;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -26,4 +27,16 @@ public class Supporter {
     @JoinColumn(name = "sportId", nullable = false)
     private Sport sport;
 
+    @Builder
+    public Supporter(User user, Sport sport) {
+        this.user = user;
+        this.sport = sport;
+    }
+
+    public static Supporter of(User user, Sport sport) {
+        return Supporter.builder()
+                .user(user)
+                .sport(sport)
+                .build();
+    }
 }

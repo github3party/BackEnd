@@ -21,9 +21,9 @@ public class SportController {
     private final SportService sportService;
 
     // 카테고리별 스포츠 목록보기
-    @GetMapping("/{categoryId}")
-    @Operation(summary = "카테고리별 스포츠 목록보기", description = "카테고리별 스포츠 목록보기")
-    public ApplicationResponse<ReadSportListResDto> readSportListByCategory(@PathVariable Long categoryId) {
+    @GetMapping("")
+    @Operation(summary = "카테고리별 스포츠 목록보기", description = "/v1/sport?categoryId= , X-ACCESS-TOKEN 필요")
+    public ApplicationResponse<ReadSportListResDto> readSportListByCategory(@RequestParam(name = "categoryId") Long categoryId) {
         Long userId = authTokensGenerator.getAccessToken();
         return ApplicationResponse.ok(sportService.readSportListByCategory(userId, categoryId));
     }
