@@ -42,7 +42,7 @@ public class CreateCommentResDto {
     public static CreateCommentResDto of(User user, Sport sport, CreateCommentReqDto createCommentReqDto){
         return CreateCommentResDto.builder()
                 .sportId(sport.getSportId())
-                .sportName(sport.getSportName())
+                .sportName(sport.getSport())
                 .userId(user.getId())
                 .userName(user.getNickname())
                 .comment(createCommentReqDto.getComment().getComment())

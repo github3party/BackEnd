@@ -26,7 +26,7 @@ public class ReadCommentListResDto {
     public static ReadCommentListResDto of(Sport sport, List<ReadCommentResDto> readCommentResDtos){
         return ReadCommentListResDto.builder()
                 .sportId(sport.getSportId())
-                .sportName(sport.getSportName())
+                .sportName(sport.getSport())
                 .readCommentResDtos(readCommentResDtos)
                 .build();
     }
