@@ -1,0 +1,36 @@
+package com.example.demo.domain.sport.entity;
+
+import com.example.demo.domain.etc.entity.Supporter;
+import com.example.demo.domain.sport.entity.LikeSport;
+import jakarta.persistence.*;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table(name = "Sport")
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class Sport {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name= "sport_id", nullable = false)
+    private Long sportId;
+
+    @Column(name = "started_game")
+    private String startedGame;
+
+    @Column(name = "end_game")
+    private String endGame;
+
+    @OneToMany(mappedBy = "sport", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<LikeSport> sportList = new ArrayList<>();
+
+    @OneToMany(mappedBy = "sport", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Supporter> supporterList = new ArrayList<>();
+
+}
