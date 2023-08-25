@@ -65,7 +65,7 @@ jobs:
         run:
           aws deploy create-deployment
           --application-name cotatohackerton3
-          --deployment-group-name dev
+          --deployment-group-name cotatohackerton3
           --file-exists-behavior OVERWRITE
           --s3-location bucket=cotatohackerton3,bundleType=zip,key=cotatohackerton3.zip
           --region ap-northeast-2
