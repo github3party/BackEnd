@@ -1,4 +1,4 @@
-package com.example.demo.domain.sport;
+package com.example.demo.domain.sport.service;
 
 import com.example.demo.domain.category.entity.Category;
 import com.example.demo.domain.category.repository.CategoryRepository;
@@ -25,7 +25,6 @@ import java.util.stream.Collectors;
 public class SportService {
 
     private final CategoryRepository categoryRepository;
-
     private final UserRepository userRepository;
     private final SportRepository sportRepository;
     private final AlarmRepository alarmRepository;

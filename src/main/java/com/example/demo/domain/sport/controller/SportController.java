@@ -1,8 +1,7 @@
 package com.example.demo.domain.sport.controller;
 
-import com.example.demo.domain.sport.SportService;
+import com.example.demo.domain.sport.service.SportService;
 import com.example.demo.domain.sport.dto.res.ReadSportListResDto;
-import com.example.demo.domain.sport.entity.Sport;
 import com.example.demo.domain.user.jwt.AuthTokensGenerator;
 import com.example.demo.global.dto.ApplicationResponse;
 import io.swagger.v3.oas.annotations.Operation;
@@ -10,8 +9,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @Slf4j
 @RestController
