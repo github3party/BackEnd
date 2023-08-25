@@ -36,4 +36,4 @@ oauth:
 jasypt:
   encryptor:
     bean: jasyptStringEncryptor
-    password : ${{PASSWORD}}
+    password : ${PASSWORD}
