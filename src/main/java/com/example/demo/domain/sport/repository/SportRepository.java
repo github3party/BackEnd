@@ -8,4 +8,6 @@ import java.util.List;
 
 public interface SportRepository extends JpaRepository<Sport, Long> {
     List<Sport> findByCategory(Category category);
+
+    List<Sport> findBySportContaining(String search);
 }
