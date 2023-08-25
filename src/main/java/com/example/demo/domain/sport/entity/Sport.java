@@ -24,6 +24,8 @@ public class Sport {
     @Column(name= "sport_id", nullable = false)
     private Long sportId;
 
+    private String sport;
+
     @Column(name = "started_game")
     private String startedGame;
 
